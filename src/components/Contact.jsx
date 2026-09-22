@@ -69,12 +69,35 @@ function Contact() {
               className="w-full px-4 py-2 border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary"
             />
           </div>
-          <button
-            type="submit"
-            className="w-full bg-primary text-white py-2 px-4 rounded hover:opacity-90 transition"
-          >
-            Enviar
-          </button>
+          <div className="flex gap-4">
+            <button
+              type="submit"
+              className="w-full bg-primary text-white py-2 px-4 rounded hover:opacity-90 transition flex-1"
+            >
+              Enviar
+            </button>
+            <a
+              href="https://wa.me/244926311857"
+              className="flex-1 bg-bg text-primary text-white py-2 px-4 rounded hover:opacity-90 transition flex items-center justify-center gap-2"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="21" r="4"></circle>
+                <line x1="17" y1="11" x2="3" y2="11"></line>
+              </svg>
+              Falar no WhatsApp
+            </a>
+            <a
+              href="mailto:xsites.ao@gmail.com"
+              className="flex-1 bg-bg text-primary text-white py-2 px-4 rounded hover:opacity-90 transition flex items-center justify-center gap-2"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              Enviar e-mail
+            </a>
+          </div>
         </form>
       </div>
     </section>
