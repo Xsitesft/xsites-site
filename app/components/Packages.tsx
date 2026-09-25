@@ -10,7 +10,7 @@ export default function Packages() {
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <div className="bg-white rounded-2xl p-8 border border-border/50 hover:shadow-xl transition-shadow">
-            <div className="text-4xl font-bold text-primary mb-2">90.000 Kz</div>
+            <div className="text-4xl font-bold text-primary mb-2">5.000 Kz/mês</div>
             <h3 className="text-2xl font-bold text-text mb-4">Básico</h3>
             <ul className="space-y-3 text-text/70">
               <li>1 página</li>
@@ -20,7 +20,7 @@ export default function Packages() {
             </ul>
           </div>
           <div className="bg-white rounded-2xl p-8 border border-border/50 hover:shadow-xl transition-shadow">
-            <div className="text-4xl font-bold text-primary mb-2">180.000 Kz</div>
+            <div className="text-4xl font-bold text-primary mb-2">8.000 Kz/mês</div>
             <h3 className="text-2xl font-bold text-text mb-4">Profissional</h3>
             <ul className="space-y-3 text-text/70">
               <li>3–5 páginas</li>
@@ -31,7 +31,7 @@ export default function Packages() {
             </ul>
           </div>
           <div className="bg-white rounded-2xl p-8 border border-border/50 hover:shadow-xl transition-shadow">
-            <div className="text-4xl font-bold text-primary mb-2">a partir de 250.000 Kz</div>
+            <div className="text-4xl font-bold text-primary mb-2">12.000 Kz/mês</div>
             <h3 className="text-2xl font-bold text-text mb-4">Loja Simples</h3>
             <ul className="space-y-3 text-text/70">
               <li>Catálogo até 20 produtos</li>

@@ -35,6 +35,16 @@ export default function FAQ() {
       question: 'Atendem fora de Luanda?',
       answer: 'Sim, atendemos todo o país.',
       details: ''
+    },
+    {
+      question: 'Qual é o prazo do contrato?',
+      answer: 'Mínimo 6 meses. Após isso, você pode cancelar sem penalidades.',
+      details: ''
+    },
+    {
+      question: 'Vocês oferecem suporte técnico?',
+      answer: 'Sim, WhatsApp 24/7, email, e painel de tickets.',
+      details: ''
     }
   ];
 
