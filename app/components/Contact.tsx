@@ -116,7 +116,7 @@ export default function Contact() {
             </button>
             <a
               href="https://wa.me/244926311857"
-              className="flex-1 bg-bg text-primary text-white py-2 px-4 rounded hover:opacity-90 transition flex items-center justify-center gap-2"
+              className="flex-1 bg-primary text-white py-2 px-4 rounded hover:opacity-90 transition flex items-center justify-center gap-2"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
@@ -127,7 +127,7 @@ export default function Contact() {
             </a>
             <a
               href="mailto:xsites.ao@gmail.com"
-              className="flex-1 bg-bg text-primary text-white py-2 px-4 rounded hover:opacity-90 transition flex items-center justify-center gap-2"
+              className="flex-1 bg-primary text-white py-2 px-4 rounded hover:opacity-90 transition flex items-center justify-center gap-2"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>

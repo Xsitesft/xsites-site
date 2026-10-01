@@ -6,7 +6,7 @@ export default function Hero() {
           Sites profissionais para pequenas empresas em Angola
         </div>
         <p className="text-text/80 text-lg mb-8 max-w-2xl">
-          Entrega em 10 dias. Preço justo. Sem riscos.
+          Prazo a combinar após confirmação do escopo. Preço justo. Processo simples e transparente.
         </p>
         <div className="flex gap-4 flex-wrap">
           <a href="https://wa.me/244926311857" className="bg-primary text-white py-3 px-6 rounded hover:opacity-90 transition flex items-center gap-2">

@@ -8,23 +8,23 @@ export default function FAQ() {
   const faqs = [
     {
       question: 'Quanto tempo demora para ficar pronto?',
-      answer: 'Até 10 dias úteis.',
-      details: 'Orçamentos mais complexos podem estender esse prazo, mas nos comprometemos a entregar dentro do combinado.'
+      answer: 'O prazo é definido após avaliação do projeto.',
+      details: ''
     },
     {
       question: 'O que está incluído no preço?',
-      answer: 'Domínio, hospedagem, design, desenvolvimento e 1–2 revisões.',
+      answer: 'Design, desenvolvimento e revisões conforme o pacote.',
       details: ''
     },
     {
       question: 'Vocês cuidam do domínio e hospedagem?',
-      answer: 'Sim, incluímos no primeiro ano, conforme o pacote contratado.',
+      answer: 'Domínio e hospedagem podem ser contratados separadamente.',
       details: ''
     },
     {
       question: 'E se eu quiser mudar algo depois?',
-      answer: '30 dias de suporte para ajustes.',
-      details: 'Após esse período, ajustes podem ser realizados mediante orçamento.'
+      answer: 'A manutenção é opcional e será contratada separadamente. Os valores e condições dependem do tipo de acompanhamento necessário.',
+      details: ''
     },
     {
       question: 'Como funciona o pagamento?',
@@ -34,11 +34,6 @@ export default function FAQ() {
     {
       question: 'Atendem fora de Luanda?',
       answer: 'Sim, atendemos todo o país.',
-      details: ''
-    },
-    {
-      question: 'Qual é o prazo do contrato?',
-      answer: 'Mínimo 6 meses. Após isso, você pode cancelar sem penalidades.',
       details: ''
     },
     {
