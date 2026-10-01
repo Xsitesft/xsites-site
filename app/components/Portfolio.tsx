@@ -7,8 +7,9 @@ export default function Portfolio() {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-text mb-6">Projetos recentes</h2>
           <p className="text-text/80 max-w-2xl mx-auto">
-            Sites entregues com excelência para nossos clientes.
+            Veja exemplos de como podemos apresentar negócios profissionais na web.
           </p>
+          <p className="text-text/50 text-sm mt-2">Exemplos conceptuais — demonstrativos.</p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6">
           <article className="group bg-white rounded-2xl overflow-hidden hover:shadow-xl transition-shadow">

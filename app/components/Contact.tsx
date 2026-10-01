@@ -4,44 +4,57 @@ import { useState } from 'react';
 import { supabase } from '@/lib/supabaseClient';
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
-  const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
-  const [errorMessage, setErrorMessage] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [status, setStatus] = useState('');
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    console.log("SUBMIT_INICIADO");
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+    const formData = new FormData(event.currentTarget);
 
-    if (!supabase) {
-      setStatus('error');
-      setErrorMessage('Configuração do Supabase em falta. Contacte via WhatsApp ou e-mail.');
+    const name = String(formData.get("name") ?? "").trim();
+    const email = String(formData.get("email") ?? "").trim();
+    const message = String(formData.get("message") ?? "").trim();
+
+    if (!name || !email || !message) {
+      console.error("CAMPOS_OBRIGATORIOS_EM_FALTA");
+      setStatus("Preencha todos os campos.");
       return;
     }
 
-    setStatus('submitting');
-    setErrorMessage('');
+    if (!supabase) {
+      console.error("SUPABASE_NAO_CONFIGURADO");
+      setStatus("Configuração do Supabase em falta. Contacte via WhatsApp ou e-mail.");
+      return;
+    }
 
-    const { error } = await supabase
-      .from('contact_submissions')
-      .insert([{ name: formData.name, email: formData.email, message: formData.message }]);
+    setIsSubmitting(true);
+    setStatus("");
 
-    if (error) {
-      console.error('Supabase error:', error);
-      setStatus('error');
-      setErrorMessage('Erro ao enviar mensagem. Tente novamente ou contacte via WhatsApp/e-mail.');
-    } else {
-      setStatus('success');
-      setFormData({ name: '', email: '', message: '' });
+    try {
+      const { error } = await supabase
+        .from("contact_submissions")
+        .insert({
+          name,
+          email,
+          message,
+        });
+
+      if (error) {
+        console.error("ERRO_SUPABASE:", error);
+        setStatus(`Erro ao enviar: ${error.message}`);
+        return;
+      }
+
+      console.log("SUBMIT_SUCESSO");
+      setStatus("Mensagem enviada com sucesso.");
+      event.currentTarget.reset();
+    } catch (error) {
+      console.error("ERRO_INESPERADO:", error);
+      setStatus("Ocorreu um erro inesperado.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -49,14 +62,14 @@ export default function Contact() {
     <section id="contacto" className="py-16 bg-bg">
       <div className="max-w-4xl mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-8">Contacto</h2>
-        {status === 'success' && (
+        {status && status.startsWith("Mensagem enviada") && (
           <div className="mb-6 p-4 bg-success/10 border border-success/30 text-success rounded-lg" role="alert">
-            Mensagem enviada com sucesso! Entraremos em contacto em breve.
+            {status}
           </div>
         )}
-        {status === 'error' && (
+        {status && !status.startsWith("Mensagem enviada") && (
           <div className="mb-6 p-4 bg-red-500/10 border border-red-500/30 text-red-500 rounded-lg" role="alert">
-            {errorMessage}
+            {status}
           </div>
         )}
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -66,10 +79,8 @@ export default function Contact() {
               type="text"
               id="name"
               name="name"
-              value={formData.name}
-              onChange={handleChange}
               required
-              disabled={status === 'submitting'}
+              disabled={isSubmitting}
               className="w-full px-4 py-2 border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-50 disabled:cursor-not-allowed"
             />
           </div>
@@ -79,10 +90,8 @@ export default function Contact() {
               type="email"
               id="email"
               name="email"
-              value={formData.email}
-              onChange={handleChange}
               required
-              disabled={status === 'submitting'}
+              disabled={isSubmitting}
               className="w-full px-4 py-2 border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-50 disabled:cursor-not-allowed"
             />
           </div>
@@ -91,21 +100,19 @@ export default function Contact() {
             <textarea
               id="message"
               name="message"
-              value={formData.message}
-              onChange={handleChange}
               required
               rows={4}
-              disabled={status === 'submitting'}
+              disabled={isSubmitting}
               className="w-full px-4 py-2 border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-50 disabled:cursor-not-allowed"
             />
           </div>
           <div className="flex gap-4">
             <button
               type="submit"
-              disabled={status === 'submitting'}
+              disabled={isSubmitting}
               className="w-full bg-primary text-white py-2 px-4 rounded hover:opacity-90 transition flex-1 disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {status === 'submitting' ? 'A enviar...' : 'Enviar'}
+              {isSubmitting ? 'A enviar...' : 'Enviar'}
             </button>
             <a
               href="https://wa.me/244926311857"
