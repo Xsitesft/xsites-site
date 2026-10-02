@@ -5,7 +5,7 @@ export default function Process() {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-text mb-6">Como funciona</h2>
           <p className="text-text/80 max-w-2xl mx-auto">
-            Processo transparente e garantido do início ao fim.
+            Processo simples e transparente do início ao fim.
           </p>
         </div>
         <div className="grid grid-cols-1 gap-8">
@@ -15,7 +15,7 @@ export default function Process() {
             </div>
             <h3 className="text-2xl font-bold text-text mb-2">Briefing</h3>
             <p className="text-text/70">
-              Entendemos seu negócio e objetivos.
+              Entendemos o seu negócio e os seus objetivos.
             </p>
           </div>
           <div className="bg-white rounded-2xl p-8 flex flex-col items-center text-center border border-border/50">
@@ -24,7 +24,7 @@ export default function Process() {
             </div>
             <h3 className="text-2xl font-bold text-text mb-2">Criação</h3>
             <p className="text-text/70">
-              Desenvolvemos o site com base no combinado.
+              Desenvolvemos o site com base no que foi combinado.
             </p>
           </div>
           <div className="bg-white rounded-2xl p-8 flex flex-col items-center text-center border border-border/50">
@@ -33,7 +33,7 @@ export default function Process() {
             </div>
             <h3 className="text-2xl font-bold text-text mb-2">Revisão</h3>
             <p className="text-text/70">
-              Você aprova e pede ajustes.
+              Aprova o resultado e solicita ajustes.
             </p>
           </div>
           <div className="bg-white rounded-2xl p-8 flex flex-col items-center text-center border border-border/50">
@@ -42,7 +42,7 @@ export default function Process() {
             </div>
             <h3 className="text-2xl font-bold text-text mb-2">Entrega</h3>
             <p className="text-text/70">
-              Site no ar + orientações de uso.
+              Publicamos o site e fornecemos orientações de uso.
             </p>
           </div>
         </div>

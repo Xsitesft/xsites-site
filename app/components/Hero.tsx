@@ -1,7 +1,12 @@
 export default function Hero() {
   return (
-    <section id="inicio" className="py-24 bg-bg">
-      <div className="max-w-7xl mx-auto px-4 text-text">
+    <section id="inicio" className="relative py-24 bg-bg overflow-hidden">
+      <picture className="absolute inset-0 -z-10">
+        <source media="(max-width: 768px)" srcSet="/assets/images/hero-bg-mobile.webp" type="image/webp" />
+        <source srcSet="/assets/images/hero-bg.webp" type="image/webp" />
+        <img src="/assets/images/hero-bg.webp" alt="" className="w-full h-full object-cover opacity-10" />
+      </picture>
+      <div className="max-w-7xl mx-auto px-4 text-text relative z-10">
         <div className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
           Sites profissionais para pequenas empresas em Angola
         </div>

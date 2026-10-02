@@ -8,37 +8,37 @@ export default function FAQ() {
   const faqs = [
     {
       question: 'Quanto tempo demora para ficar pronto?',
-      answer: 'O prazo é definido após avaliação do projeto.',
+      answer: 'O prazo é combinado de acordo com o tipo de site e começa depois de recebermos todos os textos, imagens e informações necessários.',
       details: ''
     },
     {
       question: 'O que está incluído no preço?',
-      answer: 'Design, desenvolvimento e revisões conforme o pacote.',
+      answer: 'O preço inclui os itens indicados no pacote escolhido. Os textos, imagens, logótipo, preços e contactos devem ser fornecidos pelo cliente. Novas páginas ou funcionalidades podem ter custo adicional.',
       details: ''
     },
     {
       question: 'Vocês cuidam do domínio e hospedagem?',
-      answer: 'Domínio e hospedagem podem ser contratados separadamente.',
+      answer: 'Podemos orientar ou tratar do domínio e da hospedagem como serviços opcionais. Os custos dependem do fornecedor e não estão incluídos automaticamente no preço de criação.',
       details: ''
     },
     {
       question: 'E se eu quiser mudar algo depois?',
-      answer: 'A manutenção é opcional e será contratada separadamente. Os valores e condições dependem do tipo de acompanhamento necessário.',
+      answer: 'Cada pacote inclui um número definido de rondas de pequenas correções. Novas páginas, funcionalidades ou alterações fora do escopo podem ser orçamentadas separadamente.',
       details: ''
     },
     {
       question: 'Como funciona o pagamento?',
-      answer: '50% no início e 50% na entrega.',
+      answer: 'O valor da criação é único. Pode ser pago em duas parcelas: 50% no início e 50% antes da publicação do site.',
       details: ''
     },
     {
       question: 'Atendem fora de Luanda?',
-      answer: 'Sim, atendemos todo o país.',
+      answer: 'Sim. Atendemos clientes de qualquer província de Angola à distância, através de WhatsApp e outros meios combinados.',
       details: ''
     },
     {
       question: 'Vocês oferecem suporte técnico?',
-      answer: 'Sim, WhatsApp 24/7, email, e painel de tickets.',
+      answer: 'Sim. Após a entrega, oferecemos orientação inicial gratuita. A manutenção contínua, alterações e suporte técnico recorrente são serviços opcionais, com condições e valores definidos separadamente.',
       details: ''
     }
   ];

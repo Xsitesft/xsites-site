@@ -27,7 +27,7 @@ export default function Footer() {
             </a>
           </div>
           <p className="text-sm">
-            © 2026 X Sites. Todos os direitos reservados.
+            © {new Date().getFullYear()} X Sites. Todos os direitos reservados.
           </p>
         </div>
       </div>

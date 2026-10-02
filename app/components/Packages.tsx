@@ -10,6 +10,7 @@ export default function Packages() {
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <div className="bg-white rounded-2xl p-8 border border-border/50 hover:shadow-xl transition-shadow">
+            <img src="/assets/images/icon-site.svg" alt="" width="48" height="48" className="text-primary mb-4" />
             <div className="text-4xl font-bold text-primary mb-2">5.000 Kz</div>
             <h3 className="text-2xl font-bold text-text mb-4">Básico</h3>
             <ul className="space-y-3 text-text/70">
@@ -19,6 +20,7 @@ export default function Packages() {
             </ul>
           </div>
           <div className="bg-white rounded-2xl p-8 border border-border/50 hover:shadow-xl transition-shadow">
+            <img src="/assets/images/icon-landing.svg" alt="" width="48" height="48" className="text-primary mb-4" />
             <div className="text-4xl font-bold text-primary mb-2">8.000 Kz</div>
             <h3 className="text-2xl font-bold text-text mb-4">Profissional</h3>
             <ul className="space-y-3 text-text/70">
@@ -29,6 +31,7 @@ export default function Packages() {
             </ul>
           </div>
           <div className="bg-white rounded-2xl p-8 border border-border/50 hover:shadow-xl transition-shadow">
+            <img src="/assets/images/icon-loja.svg" alt="" width="48" height="48" className="text-primary mb-4" />
             <div className="text-4xl font-bold text-primary mb-2">12.000 Kz</div>
             <h3 className="text-2xl font-bold text-text mb-4">Loja Simples</h3>
             <ul className="space-y-3 text-text/70">

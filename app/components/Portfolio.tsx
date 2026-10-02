@@ -22,9 +22,9 @@ export default function Portfolio() {
               className="w-full h-48 object-cover"
             />
             <div className="p-6">
-              <h3 className="text-xl font-bold text-text mb-2">Exemplo: site para clínica</h3>
+              <h3 className="text-xl font-bold text-text mb-2">Exemplo conceptual: site para clínica</h3>
               <p className="text-text/70">
-                Portal institucional com agendamento online.
+                Portal institucional com pedidos de marcação pelo WhatsApp.
               </p>
             </div>
           </article>
@@ -38,9 +38,9 @@ export default function Portfolio() {
               className="w-full h-48 object-cover"
             />
             <div className="p-6">
-              <h3 className="text-xl font-bold text-text mb-2">Exemplo: catálogo com pedidos pelo WhatsApp</h3>
+              <h3 className="text-xl font-bold text-text mb-2">Exemplo conceptual: catálogo para loja</h3>
               <p className="text-text/70">
-                Catálogo de produtos com integração WhatsApp.
+                Catálogo de produtos com pedidos pelo WhatsApp.
               </p>
             </div>
           </article>
