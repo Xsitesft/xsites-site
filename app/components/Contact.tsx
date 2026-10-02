@@ -59,66 +59,66 @@ export default function Contact() {
   };
 
   return (
-    <section id="contacto" className="py-16 bg-bg">
+    <section id="contacto" className="py-16 section-bg">
       <div className="max-w-4xl mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-8">Contacto</h2>
         {status && status.startsWith("Mensagem enviada") && (
-          <div className="mb-6 p-4 bg-success/10 border border-success/30 text-success rounded-lg" role="alert">
+          <div className="mb-6 p-4 bg-gold/10 border border-gold/30 text-gold-light rounded-lg glass-card" role="alert">
             {status}
           </div>
         )}
         {status && !status.startsWith("Mensagem enviada") && (
-          <div className="mb-6 p-4 bg-red-500/10 border border-red-500/30 text-red-500 rounded-lg" role="alert">
+          <div className="mb-6 p-4 bg-red-500/10 border border-red-500/30 text-red-500 rounded-lg glass-card" role="alert">
             {status}
           </div>
         )}
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-4 glass-card-light rounded-xl p-8">
           <div>
-            <label htmlFor="name" className="block text-sm font-medium text-text mb-1">Nome</label>
+            <label htmlFor="name" className="block text-sm font-medium text-text-muted mb-1">Nome</label>
             <input
               type="text"
               id="name"
               name="name"
               required
               disabled={isSubmitting}
-              className="w-full px-4 py-2 border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full px-4 py-2 bg-bg-secondary border border-border rounded focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold disabled:opacity-50 disabled:cursor-not-allowed text-text placeholder-text-muted transition"
             />
           </div>
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-text mb-1">Email</label>
+            <label htmlFor="email" className="block text-sm font-medium text-text-muted mb-1">Email</label>
             <input
               type="email"
               id="email"
               name="email"
               required
               disabled={isSubmitting}
-              className="w-full px-4 py-2 border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full px-4 py-2 bg-bg-secondary border border-border rounded focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold disabled:opacity-50 disabled:cursor-not-allowed text-text placeholder-text-muted transition"
             />
           </div>
           <div>
-            <label htmlFor="message" className="block text-sm font-medium text-text mb-1">Mensagem</label>
+            <label htmlFor="message" className="block text-sm font-medium text-text-muted mb-1">Mensagem</label>
             <textarea
               id="message"
               name="message"
               required
               rows={4}
               disabled={isSubmitting}
-              className="w-full px-4 py-2 border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full px-4 py-2 bg-bg-secondary border border-border rounded focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold disabled:opacity-50 disabled:cursor-not-allowed text-text placeholder-text-muted transition"
             />
           </div>
-          <div className="flex gap-4">
+          <div className="flex gap-4 flex-wrap">
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-primary text-white py-2 px-4 rounded hover:opacity-90 transition flex-1 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full sm:flex-1 bg-gold text-bg py-3 px-6 rounded hover:bg-gold-light hover:text-bg transition font-semibold focus-visible:outline-gold focus-visible:outline-2 focus-visible:outline-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isSubmitting ? 'A enviar...' : 'Enviar'}
             </button>
             <a
               href="https://wa.me/244926311857"
-              className="flex-1 bg-primary text-white py-2 px-4 rounded hover:opacity-90 transition flex items-center justify-center gap-2"
+              className="w-full sm:flex-1 border border-gold text-gold-light py-3 px-6 rounded hover:bg-gold hover:text-bg transition flex items-center justify-center gap-2 font-semibold focus-visible:outline-gold focus-visible:outline-2 focus-visible:outline-offset-2"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                 <circle cx="9" cy="21" r="4"></circle>
                 <line x1="17" y1="11" x2="3" y2="11"></line>
@@ -127,9 +127,9 @@ export default function Contact() {
             </a>
             <a
               href="mailto:xsites.ao@gmail.com"
-              className="flex-1 bg-primary text-white py-2 px-4 rounded hover:opacity-90 transition flex items-center justify-center gap-2"
+              className="w-full sm:flex-1 border border-gold text-gold-light py-3 px-6 rounded hover:bg-gold hover:text-bg transition flex items-center justify-center gap-2 font-semibold focus-visible:outline-gold focus-visible:outline-2 focus-visible:outline-offset-2"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                 <polyline points="22,6 12,13 2,6"></polyline>
               </svg>

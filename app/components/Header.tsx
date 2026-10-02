@@ -18,7 +18,7 @@ export default function Header() {
   const closeMobileMenu = () => setMobileMenuOpen(false);
 
   return (
-    <nav className="bg-bg/80 backdrop-blur-md border-b border-border/50 sticky top-0 z-50">
+    <nav className="glass-card sticky top-0 z-50 border-b">
       <div className="max-w-7xl mx-auto px-4 py-6">
         <div className="flex items-center justify-between">
           <a href="#inicio" className="flex items-center gap-2">
@@ -31,10 +31,10 @@ export default function Header() {
           </a>
 
           {/* Desktop navigation */}
-          <ul className="hidden lg:flex gap-8 text-text/70 text-sm">
+          <ul className="hidden lg:flex gap-8 text-text-muted text-sm">
             {navLinks.map((link) => (
               <li key={link.href}>
-                <a href={link.href} className="hover:text-text transition">{link.label}</a>
+                <a href={link.href} className="hover:text-gold-light transition">{link.label}</a>
               </li>
             ))}
           </ul>
@@ -42,7 +42,7 @@ export default function Header() {
           {/* Mobile hamburger button */}
           <button
             type="button"
-            className="lg:hidden p-2 rounded-lg text-text/70 hover:text-text hover:bg-bg/50 transition"
+            className="lg:hidden p-2 rounded-lg text-text-muted hover:text-gold-light hover:bg-glass-light transition"
             aria-label={mobileMenuOpen ? "Fechar menu" : "Abrir menu"}
             aria-expanded={mobileMenuOpen}
             aria-controls="mobile-menu"
@@ -68,12 +68,12 @@ export default function Header() {
           id="mobile-menu"
           className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${mobileMenuOpen ? "max-h-96 opacity-100 pb-6 mt-4" : "max-h-0 opacity-0"}`}
         >
-          <ul className="flex flex-col gap-4 text-text/70 text-base">
+          <ul className="flex flex-col gap-4 text-text-muted text-base">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className="block py-2 hover:text-text transition"
+                  className="block py-2 hover:text-gold-light transition"
                   onClick={closeMobileMenu}
                 >
                   {link.label}

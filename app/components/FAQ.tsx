@@ -44,14 +44,14 @@ export default function FAQ() {
   ];
 
   return (
-    <section id="faq" className="py-24 bg-bg">
+    <section id="faq" className="py-24 section-bg">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-text mb-8">Perguntas frequentes</h2>
         </div>
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <div key={index} className="bg-white rounded-xl p-6 border border-border/50">
+            <div key={index} className="glass-card rounded-xl p-6">
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
                 className="w-full flex items-center justify-between text-left mb-2"
@@ -59,7 +59,7 @@ export default function FAQ() {
               >
                 <h3 className="text-xl font-semibold text-text">{faq.question}</h3>
                 <svg
-                  className={`w-5 h-5 text-primary transition-transform ${openIndex === index ? 'rotate-180' : ''}`}
+                  className={`w-5 h-5 text-gold transition-transform ${openIndex === index ? 'rotate-180' : ''}`}
                   viewBox="0 0 24 24"
                   fill="none"
                   strokeWidth="1.5"
@@ -70,9 +70,9 @@ export default function FAQ() {
                 </svg>
               </button>
               <div className="overflow-hidden transition-all duration-300" style={{ maxHeight: openIndex === index ? '500px' : '0' }}>
-                <p className="text-text/70">{faq.answer}</p>
+                <p className="text-text-muted">{faq.answer}</p>
                 {faq.details && (
-                  <div className="mt-2 text-sm text-text/60">
+                  <div className="mt-2 text-sm text-text-muted">
                     <p>{faq.details}</p>
                   </div>
                 )}
