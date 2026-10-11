@@ -1,3 +1,5 @@
+const BUILD_YEAR = new Date().getFullYear();
+
 export default function Footer() {
   return (
     <footer className="py-12 glass-card border-t">
@@ -5,8 +7,8 @@ export default function Footer() {
         <div className="text-center space-y-6">
           <nav className="flex flex-wrap justify-center gap-4 text-sm" aria-label="Navegação do rodapé">
             <a href="#inicio" className="hover:text-gold-light transition text-text-muted">Início</a>
-            <a href="#servicos" className="hover:text-gold-light transition text-text-muted">Serviços</a>
-            <a href="#pacotes" className="hover:text-gold-light transition text-text-muted">Pacotes</a>
+            <a href="#categorias" className="hover:text-gold-light transition text-text-muted">Categorias</a>
+            <a href="#demo-barbearia" className="hover:text-gold-light transition text-text-muted">Demonstração</a>
             <a href="#contacto" className="hover:text-gold-light transition text-text-muted">Contacto</a>
           </nav>
           <div className="flex flex-wrap justify-center gap-4 text-sm">
@@ -27,7 +29,7 @@ export default function Footer() {
             </a>
           </div>
           <p className="text-sm text-text-muted">
-            © {new Date().getFullYear()} X Sites. Todos os direitos reservados.
+            © {BUILD_YEAR} X Sites. Todos os direitos reservados.
           </p>
         </div>
       </div>

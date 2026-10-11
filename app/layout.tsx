@@ -16,8 +16,17 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: 'XSites',
-  description: 'XSites website',
+  title: 'XSites — Sites profissionais para pequenas empresas em Angola',
+  description:
+    'A XSites cria sites profissionais para pequenas empresas em Angola, com soluções adaptadas a salões, restaurantes, clínicas, hotéis, lojas e prestadores de serviços.',
+  openGraph: {
+    title: 'XSites — Sites profissionais para pequenas empresas em Angola',
+    description:
+      'A XSites cria sites profissionais para pequenas empresas em Angola, com soluções adaptadas a salões, restaurantes, clínicas, hotéis, lojas e prestadores de serviços.',
+    type: 'website',
+    locale: 'pt_AO',
+    siteName: 'XSites',
+  },
 };
 
 export default function RootLayout({
@@ -26,7 +35,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR" className={`${poppins.variable} ${inter.variable} bg-bg text-text`}>
+    <html lang="pt-AO" className={`${poppins.variable} ${inter.variable} bg-bg text-text`}>
       <head>
         <link rel="icon" href="/assets/favicon.svg" />
       </head>

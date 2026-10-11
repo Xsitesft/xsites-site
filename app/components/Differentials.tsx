@@ -8,41 +8,32 @@ export default function Differentials() {
             As melhores razões para transformar seu negócio com um site profissional.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="glass-card rounded-xl p-6 hover:shadow-2xl transition-shadow">
             <div className="w-6 h-6 bg-gold/20 rounded-full flex items-center justify-center text-gold mb-3">
               <img src="/assets/icons/icon-diferencial-preco.svg" alt="" width="24" height="24" />
             </div>
-            <h3 className="text-xl font-semibold text-text mb-2">Preços públicos e sem surpresas</h3>
+            <h3 className="text-xl font-semibold text-text mb-2">Preços claros</h3>
             <p className="text-text-muted">
-              Transparência total desde o primeiro orçamento.
-            </p>
-          </div>
-          <div className="glass-card rounded-xl p-6 hover:shadow-2xl transition-shadow">
-            <div className="w-6 h-6 bg-gold/20 rounded-full flex items-center justify-center text-gold mb-3">
-              <img src="/assets/icons/icon-diferencial-velocidade.svg" alt="" width="24" height="24" />
-            </div>
-            <h3 className="text-xl font-semibold text-text mb-2">Entrega em até 10 dias</h3>
-            <p className="text-text-muted">
-              Cumprimos prazos sem qualidade comprometida.
+              Apresentamos o que está incluído e esclarecemos o orçamento antes de começar.
             </p>
           </div>
           <div className="glass-card rounded-xl p-6 hover:shadow-2xl transition-shadow">
             <div className="w-6 h-6 bg-gold/20 rounded-full flex items-center justify-center text-gold mb-3">
               <img src="/assets/icons/icon-diferencial-whatsapp.svg" alt="" width="24" height="24" />
             </div>
-            <h3 className="text-xl font-semibold text-text mb-2">Foco em gerar contactos e vendas</h3>
+            <h3 className="text-xl font-semibold text-text mb-2">Foco em gerar contactos</h3>
             <p className="text-text-muted">
-              Sites desenhados para converter visitantes em clientes.
+              Criamos sites pensados para apresentar o negócio e facilitar o contacto com potenciais clientes.
             </p>
           </div>
           <div className="glass-card rounded-xl p-6 hover:shadow-2xl transition-shadow">
             <div className="w-6 h-6 bg-gold/20 rounded-full flex items-center justify-center text-gold mb-3">
               <img src="/assets/icons/icon-diferencial-suporte.svg" alt="" width="24" height="24" />
             </div>
-            <h3 className="text-xl font-semibold text-text mb-2">Nem tão caro como agência, nem tão arriscado como freelancer</h3>
+            <h3 className="text-xl font-semibold text-text mb-2">Solução adaptada ao negócio</h3>
             <p className="text-text-muted">
-              Equilíbrio perfeito entre qualidade e preço justo.
+              Adaptamos a estrutura e o conteúdo às necessidades de cada tipo de negócio.
             </p>
           </div>
         </div>
