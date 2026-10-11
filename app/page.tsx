@@ -8,7 +8,6 @@ import Packages from './components/Packages';
 import Process from './components/Process';
 import Portfolio from './components/Portfolio';
 import Differentials from './components/Differentials';
-import Contact from './components/Contact';
 import FinalCTA from './components/FinalCTA';
 import Footer from './components/Footer';
 
@@ -25,7 +24,6 @@ export default function Home() {
       <Process />
       <Portfolio />
       <Differentials />
-      <Contact />
       <FinalCTA />
       <Footer />
     </>

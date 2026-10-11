@@ -1,6 +1,7 @@
 'use client';
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 export default function Header() {
@@ -12,7 +13,7 @@ export default function Header() {
     { href: "#pacotes", label: "Pacotes" },
     { href: "#processo", label: "Processo" },
     { href: "#portfolio", label: "Portfólio" },
-    { href: "#contacto", label: "Contacto" },
+    { href: "/contacto", label: "Contacto" },
   ];
 
   const closeMobileMenu = () => setMobileMenuOpen(false);
@@ -34,7 +35,15 @@ export default function Header() {
           <ul className="hidden lg:flex gap-8 text-text-muted text-sm">
             {navLinks.map((link) => (
               <li key={link.href}>
-                <a href={link.href} className="hover:text-gold-light transition">{link.label}</a>
+                {link.href === "/contacto" ? (
+                  <Link href={link.href} className="hover:text-gold-light transition">
+                    {link.label}
+                  </Link>
+                ) : (
+                  <a href={link.href} className="hover:text-gold-light transition">
+                    {link.label}
+                  </a>
+                )}
               </li>
             ))}
           </ul>
@@ -71,13 +80,23 @@ export default function Header() {
           <ul className="flex flex-col gap-4 text-text-muted text-base">
             {navLinks.map((link) => (
               <li key={link.href}>
-                <a
-                  href={link.href}
-                  className="block py-2 hover:text-gold-light transition"
-                  onClick={closeMobileMenu}
-                >
-                  {link.label}
-                </a>
+                {link.href === "/contacto" ? (
+                  <Link
+                    href={link.href}
+                    className="block py-2 hover:text-gold-light transition"
+                    onClick={closeMobileMenu}
+                  >
+                    {link.label}
+                  </Link>
+                ) : (
+                  <a
+                    href={link.href}
+                    className="block py-2 hover:text-gold-light transition"
+                    onClick={closeMobileMenu}
+                  >
+                    {link.label}
+                  </a>
+                )}
               </li>
             ))}
           </ul>

@@ -1,5 +1,7 @@
 const BUILD_YEAR = new Date().getFullYear();
 
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="py-12 glass-card border-t">
@@ -10,7 +12,7 @@ export default function Footer() {
             <a href="#categorias" className="hover:text-gold-light transition text-text-muted">Categorias</a>
             <a href="#demo-barbearia" className="hover:text-gold-light transition text-text-muted">Demonstração</a>
             <a href="/faq" className="hover:text-gold-light transition text-text-muted">FAQ</a>
-            <a href="#contacto" className="hover:text-gold-light transition text-text-muted">Contacto</a>
+            <Link href="/contacto" className="hover:text-gold-light transition text-text-muted">Contacto</Link>
           </nav>
           <div className="flex flex-wrap justify-center gap-4 text-sm">
             <a href="mailto:xsites.ao@gmail.com" className="hover:text-gold-light transition flex items-center gap-1 text-text-muted">

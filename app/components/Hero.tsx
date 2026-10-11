@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Hero() {
   return (
     <section id="inicio" className="relative py-24 overflow-hidden section-bg">
@@ -23,13 +25,13 @@ export default function Hero() {
             </svg>
             Falar no WhatsApp
           </a>
-          <a href="#contacto" className="border border-gold text-gold-light py-3 px-6 rounded hover:bg-gold hover:text-bg transition flex items-center gap-2 font-semibold focus-visible:outline-gold focus-visible:outline-2 focus-visible:outline-offset-2">
+          <Link href="/contacto" className="border border-gold text-gold-light py-3 px-6 rounded hover:bg-gold hover:text-bg transition flex items-center gap-2 font-semibold focus-visible:outline-gold focus-visible:outline-2 focus-visible:outline-offset-2">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
               <polyline points="22 4 12 14.01 9 10.91" />
             </svg>
             Pedir orçamento
-          </a>
+          </Link>
         </div>
       </div>
     </section>

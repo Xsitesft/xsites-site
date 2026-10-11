@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function FinalCTA() {
   return (
     <section id="cta-final" className="py-24 section-bg" aria-labelledby="cta-heading">
@@ -15,12 +17,12 @@ export default function FinalCTA() {
           >
             Ver exemplos
           </a>
-          <a
-            href="#contacto"
+          <Link
+            href="/contacto"
             className="w-full sm:w-auto border border-gold text-gold-light py-3 px-6 sm:px-8 rounded font-semibold hover:bg-gold hover:text-bg transition focus-visible:outline-gold focus-visible:outline-2 focus-visible:outline-offset-2"
           >
             Pedir uma estimativa
-          </a>
+          </Link>
           <a
             href="https://wa.me/244926311857"
             target="_blank"
