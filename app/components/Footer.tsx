@@ -9,6 +9,7 @@ export default function Footer() {
             <a href="#inicio" className="hover:text-gold-light transition text-text-muted">Início</a>
             <a href="#categorias" className="hover:text-gold-light transition text-text-muted">Categorias</a>
             <a href="#demo-barbearia" className="hover:text-gold-light transition text-text-muted">Demonstração</a>
+            <a href="/faq" className="hover:text-gold-light transition text-text-muted">FAQ</a>
             <a href="#contacto" className="hover:text-gold-light transition text-text-muted">Contacto</a>
           </nav>
           <div className="flex flex-wrap justify-center gap-4 text-sm">
